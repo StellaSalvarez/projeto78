@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>Álbum de Família</title>
+  </head>
+  <body>
+  <img src = "family.png" 
+    style= "width: 30%;" id="imagemFamilia">
+    
+  <h4 id="nomeAparente">Familia</h4> 
+
+  <button onclick="update();">Próximo</button>
+  
+  <script>
+   var imgs = [
+    "family.png",
+    "Stella.jpeg",
+    "Emanuel.jpeg",
+    "Joao.jpeg",
+    "Sabrina.jpeg",
+    "Pipoca.jpeg"
+    ]
+
+   var names = ["Familia","Stella Maciel","Emanuel Maciel","João Maciel","Sabrina Maciel","Pipoca Maciel"]
+
+   var i = 0;
+   function update()
+   {
+      i++;
+      var numeroDeMembrosDaFamilia = 5
+      if (i > numeroDeMembrosDaFamilia )
+      {
+        i = 0;
+      }
+    var imgAlterada = imgs[i];
+    var nomeAlterado = names[i];
+    document.getElementById ("imagemFamilia").src = imgAlterada;
+    document.getElementById ("nomeAparente").innerHTML = nomeAlterado;
+    }
+  </script>
+  </body>
+</html>
